@@ -64,13 +64,13 @@ CREATE TABLE WEATHER_RECORD(
       battery_volts           VARCHAR(10)       NULL,
       temperature             DOUBLE(6,3)       NULL,
       relative_humidity       DOUBLE(6,3)       NULL,
-      scalar_wind_speed        DOUBLE(6,3)       NULL,
-      resultant_wind_speed     DOUBLE(6,3)       NULL,
+      scalar_wind_speed       DOUBLE(6,3)       NULL,
+      resultant_wind_speed    DOUBLE(6,3)       NULL,
       wind_direction          DOUBLE(6,3)       NULL,
       wind_stand_deviation    DOUBLE(6,3)       NULL,
       peak_gust               DOUBLE(6,3)       NULL,
       time_peak_gust          TIME              NULL,
-      barometric_pressure      DOUBLE(6,3)       NULL,
+      barometric_pressure     DOUBLE(6,3)       NULL,
       rainfall                DOUBLE(6,3)       NULL,
       CONSTRAINT              REC_STATION_PK    FOREIGN KEY(station_id)
                               REFERENCES        WEATHER_STATION(station_id)

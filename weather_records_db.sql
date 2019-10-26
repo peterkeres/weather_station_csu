@@ -47,7 +47,7 @@ CREATE TABLE SENSOR_LIST(
       station_id            INT                 NOT NULL,
       active_date           DATE                NOT NULL,
       is_active             BINARY              NOT NULL,
-      de_avtive_date        DATE                NULL,
+      de_active_date        DATE                NULL,
       CONSTRAINT            LIS_SENSOR_PK       FOREIGN KEY(sensor_id)
                             REFERENCES          SENSORS(sensor_id),
       CONSTRAINT            LIS_STATION_PK      FOREIGN KEY(station_id)
@@ -60,17 +60,17 @@ CREATE TABLE WEATHER_RECORD(
       station_id              INT               NOT NULL,
       dateTaken               DATE              NOT NULL,
       timeTaken               TIME              NOT NULL,
-      record_number           INTEGER(10)       NULL,
-      battery_bolts           DOUBLE(6,3)       NULL,
+      record_number           VARCHAR(25)       NULL,
+      battery_volts           VARCHAR(10)       NULL,
       temperature             DOUBLE(6,3)       NULL,
       relative_humidity       DOUBLE(6,3)       NULL,
-      solar_wind_speed        DOUBLE(6,3)       NULL,
-      resfront_wind_speed     DOUBLE(6,3)       NULL,
+      scalar_wind_speed        DOUBLE(6,3)       NULL,
+      resultant_wind_speed     DOUBLE(6,3)       NULL,
       wind_direction          DOUBLE(6,3)       NULL,
       wind_stand_deviation    DOUBLE(6,3)       NULL,
       peak_gust               DOUBLE(6,3)       NULL,
       time_peak_gust          TIME              NULL,
-      parometic_pressure      DOUBLE(6,3)       NULL,
+      barometric_pressure      DOUBLE(6,3)       NULL,
       rainfall                DOUBLE(6,3)       NULL,
       CONSTRAINT              REC_STATION_PK    FOREIGN KEY(station_id)
                               REFERENCES        WEATHER_STATION(station_id)

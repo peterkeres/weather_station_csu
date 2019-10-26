@@ -10,7 +10,7 @@
       groups
       right_list
       rights
-      event 
+      event
 */
 
 
@@ -21,7 +21,7 @@ CREATE TABLE USERS(
       name                    VARCHAR(100)    NOT NULL,
       username                VARCHAR(100)    NOT NULL,
       address                 VARCHAR(150)    NOT NULL,
-      active                  BINARY          NOT NULL,
+      is_active               BINARY          NOT NULL,
       phone                   INT(10)         NOT NULL,
       email                   VARCHAR(150)    NOT NULL,
       password                VARCHAR(150)    NOT NULL,
@@ -37,8 +37,8 @@ CREATE TABLE GROUPS(
       group_id                 INTEGER         PRIMARY KEY,           --AUTO_INCREMENT
       name                     VARCHAR(200)    NOT NULL,
       description              VARCHAR(500)    NOT NULL,
-      created_date             VARCHAR(150)    NOT NULL,
-      created_time             VARCHAR(150)    NOT NULL,
+      created_date             DATE            NOT NULL,
+      created_time             TIME            NOT NULL,
       created_by               INT             NOT NULL,
       CONSTRAINT               GRO_USER_PK     FOREIGN KEY(created_by)
                                REFERENCES      USERS(user_id)
@@ -46,12 +46,12 @@ CREATE TABLE GROUPS(
 
 
 --creates a table tha will hold information about what rights are tied to what group in the weather station project
-CREATE TABLE RIGHT_LIST(
+CREATE TABLE RIGHTS_LIST(
       right_list_id            INTEGER         PRIMARY KEY,           --AUTO_INCREMENT
       group_id                 INT             NOT NULL,
       right_id                 INT             NOT NULL,
-      created_date             VARCHAR(150)    NOT NULL,
-      created_time             VARCHAR(150)    NOT NULL,
+      created_date             DATE            NOT NULL,
+      created_time             TIME            NOT NULL,
       created_by               INT             NOT NULL,
       CONSTRAINT               RLIS_USER_PK    FOREIGN KEY(created_by)
                                REFERENCES      USERS(user_id),
@@ -67,9 +67,9 @@ CREATE TABLE RIGHTS(
       right_id                 INTEGER         PRIMARY KEY,           --AUTO_INCREMENT
       name                     VARCHAR(200)    NOT NULL,
       description              VARCHAR(500)    NOT NULL,
-      active                   BINARY          NOT NULL,
-      created_date             VARCHAR(150)    NOT NULL,
-      created_time             VARCHAR(150)    NOT NULL,
+      is_active                BINARY          NOT NULL,
+      created_date             DATE            NOT NULL,
+      created_time             TIME            NOT NULL,
       created_by               INT             NOT NULL,
       CONSTRAINT               RLIS_USER_PK    FOREIGN KEY(created_by)
                                REFERENCES      USERS(user_id)
@@ -81,8 +81,8 @@ CREATE TABLE EVENT(
       event_id                 INTEGER         PRIMARY KEY,           --AUTO_INCREMENT
       name                     VARCHAR(200)    NOT NULL,
       description              VARCHAR(500)    NOT NULL,
-      created_date             VARCHAR(150)    NOT NULL,
-      created_time             VARCHAR(150)    NOT NULL,
+      created_date             DATE            NOT NULL,
+      created_time             TIME            NOT NULL,
       created_by               INT             NOT NULL,
       CONSTRAINT               RLIS_USER_PK    FOREIGN KEY(created_by)
                                REFERENCES      USERS(user_id)

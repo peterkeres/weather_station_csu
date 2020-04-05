@@ -18,3 +18,6 @@ This is the SQLite database that is used for the weather station project for col
 
 
 ## Moving forward
+
+
+## Contact info

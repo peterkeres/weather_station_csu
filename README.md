@@ -38,5 +38,21 @@ Anthony Obando
 ## Database Developer:
 [Peter Keres](https://github.com/peterkeres)
 # What is in this repository
-# Current State of things
-# Moving forward
+Is a collections of files that are used to create the database for the mesonet project.
+
+### Files:
+* OXBOW_one_min_20190217.txt
+    *  Output from one weather sensor over a few hour period. 
+* weather_file_reader.py
+    * is a python script that reads in the weather station output file to extract the data. The data input into the test database.
+* weather_records_data_test.sql
+    * Creates random test data to be placed into the weather records tables
+* weather_records_db.sql
+    * creates the tables for the records potation of the database. 
+* weather_station_db_test.db
+    * is the in place test database.
+* weather_users_data_test.sql
+    * creates random test data to be placed in the users tables. 
+* weather_users_db.sql
+    * creates the tables for the users potation of the database. 
+

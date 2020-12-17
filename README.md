@@ -1,6 +1,9 @@
 # Database for Microclimate Mesonet Research
 This repo holds files that are needed to create, fill, and test the database for the microclimate mesonet project
 
+![Users database](Resources/Database%20design%20users.png)
+![Weather Records database](Resources/Database%20design%20weather%20records.png)
+
 # Whats a Mesonet
 A network of weather sensing devices that can record the weather information around them. This collecting of data can be used to track weather movements on a accurate scale. Tracking the sudden creation and change in tornados and other weather forces are now possible with a mesonet.
 
@@ -12,9 +15,9 @@ highlights of interesting weather events.
 in short, we wanted to create instructions so others could create there own mesonet and an accompanying website to view the weather data being recorded. 
 
 # Publishing
-Our work is being published by [Springer publishing](https://www.springerpub.com/) ~~and is being presented at the [2020 AINA International Conference](http://voyager.ce.fit.ac.jp/conf/aina/2020/) in Caserta, Italy on april 15.~~ 
+Our work is being published by [Springer publishing](http://link-springer-com-443.webvpn.fjmu.edu.cn/chapter/10.1007%2F978-3-030-44038-1_3) ~~and is being presented at the [2020 AINA International Conference](http://voyager.ce.fit.ac.jp/conf/aina/2020/) in Caserta, Italy on april 15.~~ 
 
-for your convince, i provided a link to the published work: [Published Work](published_work.pdf)
+For your convince, i provided a link to the published work: [Published Work](Resources/published_work.pdf)
 
 ## Covid-19 update:
 Due to the Covid-19 outbreak, the AINA 2020 conference has been canceled. The paper is still being published by Springer publishing. 

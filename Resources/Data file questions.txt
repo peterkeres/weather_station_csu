@@ -1,0 +1,10 @@
+
+The fields are as follows 
+
+Date Time / Record Number / Battery Voltage / Temperature (Celsius)  / Relative Humidity (%) / Scalar Mean Wind Speed (meters per second)  / Resultant Mean Wind Speed (meters per second) / Wind Direction (degrees) / Wind Direction Standard Deviation (degrees) / Peak Gust / Time of Peak Gust / Barometric Pressure (mb) / Rainfall (inches)
+
+Correct, the first line is the Header. The fields are as follows: 
+
+Some Encoding thing / Name of the Datalogger / DataLogger Model / ? / ? / Data Logger Program name and path 
+
+There are a few quality control things that need to happen. For example, 600 needs to be added to each pressure value. A static offset also needs to be applied to the wind direction to correct it to North. The value is 163.16.
